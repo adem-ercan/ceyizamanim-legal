@@ -5,25 +5,453 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>çeyiZamanım - Gizlilik Politikası</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; background-color: #121212; color: #e0e0e0; }
-        h1, h2 { color: #ffffff; }
-        a { color: #bb86fc; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            padding: 24px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #0f0f14;
+            color: #d1d5db;
+            font-size: 15px;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+        }
+        h2 {
+            color: #f3f4f6;
+            font-size: 19px;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        h3 {
+            color: #e5e7eb;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 14px;
+        }
+        ul, ol {
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        a {
+            color: #a78bfa;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .update-date {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+        .summary-box {
+            background: rgba(167, 139, 250, 0.08);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            color: #c4b5fd;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .data-table th {
+            background: rgba(255,255,255,0.04);
+            color: #e5e7eb;
+            font-weight: 600;
+        }
+        .data-table td {
+            color: #d1d5db;
+        }
+        strong {
+            color: #e5e7eb;
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 13px;
+            color: #6b7280;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+
     <h1>çeyiZamanım Gizlilik Politikası</h1>
-    <p><strong>Son Güncelleme:</strong> 5 Mart 2026</p>
-    
-    <h2>1. Toplanan Veriler</h2>
-    <p>çeyiZamanım, kullanıcı deneyimini sağlamak için hesap bilgilerinizi (e-posta adresi, ad), eklediğiniz çeyiz listelerini, bütçe verilerini ve isteğe bağlı olarak yüklediğiniz ürün görsellerini Google Firebase altyapısında güvenle saklar.</p>
-    
-    <h2>2. Yapay Zeka (AI) Asistanı Kullanımı</h2>
-    <p>Uygulama içindeki "Çeyiz Asistanı", listelerinizi ve yüklediğiniz fotoğrafları analiz etmek için üretken yapay zeka modelleri kullanır. Bu veriler sadece size daha iyi tavsiyeler vermek amacıyla anlık olarak işlenir.</p>
+    <p class="update-date"><strong>Son Güncelleme:</strong> 31 Mayıs 2026 &nbsp;|&nbsp; <strong>Yürürlük Tarihi:</strong> 31 Mayıs 2026</p>
 
-    <h2>3. Üçüncü Taraf Hizmetleri</h2>
-    <p>Altyapımızda Google Analytics ve Firebase (Google LLC) kullanılmaktadır. Bu servislerin kendi gizlilik politikaları geçerlidir.</p>
+    <div class="summary-box">
+        <strong>Özet:</strong> çeyiZamanım, çeyiz hazırlığı sürecinizi kolaylaştıran bir mobil uygulamadır. Bu politika, hangi verilerinizi topladığımızı, nasıl kullandığımızı, kimlerle paylaştığımızı ve haklarınızı açıkça ortaya koyar. Verileriniz yalnızca size daha iyi hizmet sunmak amacıyla işlenir ve hiçbir koşulda üçüncü taraflara satılmaz.
+    </div>
 
-    <h2>4. İletişim</h2>
-    <p>Verilerinizin silinmesini talep etmek veya sorularınız için bizimle iletişime geçebilirsiniz: [Senin Mail Adresin]</p>
+    <!-- 1. GİRİŞ -->
+    <h2>1. Giriş ve Kapsam</h2>
+    <p>Bu Gizlilik Politikası, <strong>çeyiZamanım</strong> mobil uygulamasını ("Uygulama") kullanan tüm gerçek kişilerin ("Kullanıcı", "siz") kişisel verilerinin işlenmesine ilişkin usul ve esasları düzenler.</p>
+    <p>Uygulamayı indirerek, bir hesap oluşturarak veya kullanarak bu Gizlilik Politikası'nı okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş olursunuz.</p>
+    <p>Bu politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR), Apple App Store Yönergeleri ve Google Play Store Geliştirici Politikaları ile uyumlu olarak hazırlanmıştır.</p>
+
+    <!-- 2. VERİ SORUMLUSU -->
+    <h2>2. Veri Sorumlusu</h2>
+    <p>Kişisel verilerinizin işlenmesinden sorumlu veri sorumlusu:</p>
+    <ul>
+        <li><strong>Uygulama Adı:</strong> çeyiZamanım</li>
+        <li><strong>Geliştirici:</strong> Adem Ercan (Bireysel Geliştirici)</li>
+        <li><strong>İletişim E-postası:</strong> <a href="mailto:ceyizamanim@gmail.com">ceyizamanim@gmail.com</a></li>
+    </ul>
+
+    <!-- 3. TOPLANAN VERİLER -->
+    <h2>3. Toplanan Kişisel Veriler</h2>
+    <p>Uygulamayı kullanırken aşağıdaki kategorilerdeki veriler toplanabilir:</p>
+
+    <h3>3.1. Doğrudan Sizden Aldığımız Veriler</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Veri Kategorisi</th>
+                <th>Toplanan Veriler</th>
+                <th>Amaç</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hesap Bilgileri</strong></td>
+                <td>E-posta adresi, ad-soyad, kullanıcı adı, profil fotoğrafı, biyografi</td>
+                <td>Hesap oluşturma, kimlik doğrulama, sosyal profil görüntüleme</td>
+            </tr>
+            <tr>
+                <td><strong>Çeyiz Listesi Verileri</strong></td>
+                <td>Ürün adları, kategorileri, satın alma durumları, fiyat bilgileri, ürün görselleri</td>
+                <td>Çeyiz listesi yönetimi ve takibi</td>
+            </tr>
+            <tr>
+                <td><strong>Bütçe Verileri</strong></td>
+                <td>Toplam bütçe, harcamalar, kategori bazlı bütçe dağılımı</td>
+                <td>Bütçe planlama ve takip hizmeti</td>
+            </tr>
+            <tr>
+                <td><strong>Sosyal İçerikler</strong></td>
+                <td>Paylaşımlar (gönderi metni, görseller), yorumlar, beğeniler</td>
+                <td>Topluluk etkileşimi (Meydan özelliği)</td>
+            </tr>
+            <tr>
+                <td><strong>Geri Sayım Verileri</strong></td>
+                <td>Etkinlik adları, tarihleri</td>
+                <td>Düğün/nişan geri sayımı ve hatırlatma</td>
+            </tr>
+            <tr>
+                <td><strong>Geri Bildirimler</strong></td>
+                <td>Kullanıcı geri bildirimleri, anket yanıtları</td>
+                <td>Hizmet kalitesinin iyileştirilmesi</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3.2. Otomatik Olarak Toplanan Veriler</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Veri Kategorisi</th>
+                <th>Toplanan Veriler</th>
+                <th>Amaç</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Cihaz Bilgileri</strong></td>
+                <td>İşletim sistemi, cihaz modeli, uygulama sürümü</td>
+                <td>Teknik destek, uyumluluk, hata ayıklama</td>
+            </tr>
+            <tr>
+                <td><strong>Konum Verileri</strong></td>
+                <td>Yaklaşık veya kesin konum (yalnızca izin verildiğinde)</td>
+                <td>Mağaza konum önerileri, sosyal harita özelliği</td>
+            </tr>
+            <tr>
+                <td><strong>Bildirim Tokenleri</strong></td>
+                <td>Firebase Cloud Messaging (FCM) cihaz tokenleri</td>
+                <td>Push bildirimlerinin iletilmesi</td>
+            </tr>
+            <tr>
+                <td><strong>Kullanım Verileri</strong></td>
+                <td>Uygulama açılış sıklığı, özellik kullanımı, etkileşim istatistikleri</td>
+                <td>Uygulama performansının iyileştirilmesi</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3.3. Üçüncü Taraf Kimlik Doğrulama Verileri</h3>
+    <p>Uygulamaya aşağıdaki yöntemlerle giriş yapabilirsiniz:</p>
+    <ul>
+        <li><strong>E-posta ve Şifre:</strong> E-posta adresiniz Firebase Authentication tarafından güvenle saklanır. Şifreniz hiçbir zaman düz metin olarak depolanmaz.</li>
+        <li><strong>Google ile Giriş:</strong> Google hesabınızdaki ad, e-posta ve profil fotoğrafı URL'si alınır. Google hesap şifrenize erişim sağlanmaz.</li>
+        <li><strong>Apple ile Giriş:</strong> Apple kimliğinizdeki ad ve e-posta bilgileri alınır. Apple'ın "Hide My Email" özelliğini kullanmanız durumunda yalnızca Apple tarafından oluşturulan yönlendirilmiş e-posta adresi işlenir.</li>
+    </ul>
+
+    <!-- 4. YAPAY ZEKA -->
+    <h2>4. Yapay Zekâ (AI) Asistanı</h2>
+    <p>Uygulama, çeyiz hazırlığı sürecinize yardımcı olmak amacıyla yapay zekâ destekli bir asistan ("Çeyiz Asistanı") sunar. Bu hizmet kapsamında:</p>
+
+    <h3>4.1. İşlenen Veriler</h3>
+    <ul>
+        <li>Asistanla yaptığınız sohbet mesajları</li>
+        <li>Çeyiz listenizin içeriği (ürün adları, kategorileri, tamamlanma durumu)</li>
+        <li>Bütçe özeti bilgileri</li>
+        <li>Profil bilgileriniz (etkinlik tarihi, şehir gibi)</li>
+        <li>Yüklediğiniz fotoğraflar (stil analizi ve oda dekorasyon önerisi için)</li>
+    </ul>
+
+    <h3>4.2. Nasıl İşlenir</h3>
+    <ul>
+        <li>AI hizmeti, <strong>Google Firebase AI (Vertex AI – Gemini modelleri)</strong> üzerinden sağlanır.</li>
+        <li>Mesajlarınız ve verileriniz yalnızca anlık olarak işlenir; model eğitimi amacıyla kullanılmaz.</li>
+        <li>AI sohbet geçmişi, hesabınızın Firestore alt koleksiyonunda saklanır ve yalnızca siz erişebilirsiniz.</li>
+        <li>Premium kullanıcılar için topluluk istatistikleri anonim ve toplu halde AI'ya bağlam olarak sunulabilir.</li>
+    </ul>
+
+    <h3>4.3. AI Tavsiyelerinin Niteliği</h3>
+    <p>AI asistanının sunduğu tavsiyeler bilgilendirme amaçlıdır ve profesyonel finansal, hukuki veya dekorasyon danışmanlığı yerine geçmez. Yapay zekâ çıktıları doğruluk garantisi taşımaz.</p>
+
+    <!-- 5. FOTOĞRAF VE KAMERA -->
+    <h2>5. Fotoğraf, Kamera ve Galeri Erişimi</h2>
+    <p>Uygulama aşağıdaki durumlarda cihazınızın kamerasına veya fotoğraf galerisine erişim izni talep eder:</p>
+    <ul>
+        <li><strong>Profil fotoğrafı:</strong> Profil fotoğrafınızı çekmek veya galeriden seçmek için.</li>
+        <li><strong>Gönderi görselleri:</strong> Sosyal akışta (Meydan) paylaşım yaparken görsel eklemek için.</li>
+        <li><strong>Çeyiz ürünü görselleri:</strong> Çeyiz listenizdeki ürünlere fotoğraf eklemek için.</li>
+        <li><strong>AI stil analizi:</strong> Oda fotoğraflarını yapay zekâya göndererek dekorasyon önerisi almak için.</li>
+    </ul>
+    <p>Bu izinler isteğe bağlıdır. İzin vermemeniz halinde yalnızca ilgili özellikler kullanılamaz hale gelir; uygulamanın diğer işlevleri etkilenmez. Yüklenen görseller Firebase Storage'da şifrelenmiş bağlantıyla saklanır ve dosya boyutu <strong>10 MB</strong> ile sınırlıdır.</p>
+
+    <!-- 6. KONUM -->
+    <h2>6. Konum Verileri</h2>
+    <p>Uygulama, aşağıdaki özellikler için konum verisi toplayabilir:</p>
+    <ul>
+        <li><strong>Mağaza Konumu:</strong> Çeyiz ürünlerini satın aldığınız mağazaların konumunu haritada işaretlemek için.</li>
+        <li><strong>Sosyal Harita:</strong> Topluluk üyelerinin paylaşımlarını harita üzerinde görüntülemek için.</li>
+    </ul>
+    <p>Konum izni, cihazınızın işletim sistemi tarafından açıkça talep edilir. Konum veriniz yalnızca ilgili özellik kullanıldığında toplanır; arka planda sürekli konum takibi yapılmaz. Konum iznini istediğiniz zaman cihaz ayarlarından iptal edebilirsiniz.</p>
+
+    <!-- 7. BİLDİRİMLER -->
+    <h2>7. Bildirimler</h2>
+    <p>Uygulama, aşağıdaki amaçlarla bildirim gönderebilir:</p>
+    <ul>
+        <li><strong>Push Bildirimleri (FCM):</strong> Sosyal etkileşimler (beğeni, yorum, takip), duyurular ve güncellemeler için.</li>
+        <li><strong>Yerel Bildirimler:</strong> Geri sayım hatırlatıcıları (düğün, nişan gibi etkinliklere 1 hafta ve 1 gün kala).</li>
+    </ul>
+    <p>Bildirim izni isteğe bağlıdır. İzin vermemeniz halinde bildirimler gönderilmez; uygulamanın temel işlevleri etkilenmez.</p>
+
+    <!-- 8. PREMIUM ABONELİK -->
+    <h2>8. Premium Abonelik ve Ödeme Bilgileri</h2>
+    <p>çeyiZamanım, gelişmiş özelliklere erişim sağlayan bir Premium abonelik hizmeti sunar.</p>
+    <ul>
+        <li>Abonelik işlemleri tamamen <strong>Apple App Store</strong> (iOS) veya <strong>Google Play Store</strong> (Android) üzerinden gerçekleştirilir.</li>
+        <li>Kredi kartı, banka kartı veya diğer ödeme bilgileriniz hiçbir koşulda çeyiZamanım tarafından toplanmaz, görülmez veya saklanmaz.</li>
+        <li>Abonelik yönetimi için <strong>RevenueCat</strong> hizmeti kullanılmaktadır. RevenueCat yalnızca abonelik durumunuzu (aktif/pasif) ve işlem kimliğinizi işler.</li>
+        <li>Abonelik durumunuz, hesabınızla ilişkili olarak Firestore'da saklanır.</li>
+        <li>Aboneliğinizi istediğiniz zaman ilgili mağazanın abonelik yönetim sayfasından iptal edebilirsiniz.</li>
+    </ul>
+
+    <!-- 9. VERİ SAKLAMA VE GÜVENLİK -->
+    <h2>9. Veri Saklama ve Güvenlik</h2>
+
+    <h3>9.1. Veri Saklama Altyapısı</h3>
+    <p>Tüm verileriniz <strong>Google Firebase</strong> altyapısında saklanır:</p>
+    <ul>
+        <li><strong>Firebase Authentication:</strong> Kimlik doğrulama verileri</li>
+        <li><strong>Cloud Firestore:</strong> Kullanıcı profilleri, çeyiz listeleri, bütçe verileri, sosyal içerikler, sohbet geçmişi</li>
+        <li><strong>Firebase Storage:</strong> Profil fotoğrafları, gönderi görselleri, ürün görselleri</li>
+        <li><strong>Firebase Cloud Messaging:</strong> Bildirim tokenleri</li>
+        <li><strong>Firebase App Check:</strong> Uygulama doğrulama ve güvenlik</li>
+    </ul>
+
+    <h3>9.2. Güvenlik Önlemleri</h3>
+    <ul>
+        <li>Tüm veri iletişimi <strong>TLS/SSL</strong> şifreleme ile korunur.</li>
+        <li>Firebase Security Rules ile her kullanıcı yalnızca kendi verilerine erişebilir.</li>
+        <li>Şifreler, Firebase Authentication tarafından endüstri standardı hash algoritmaları ile saklanır.</li>
+        <li>Firebase App Check ile yetkisiz API erişimleri engellenir.</li>
+        <li>Dosya yüklemelerinde tür ve boyut doğrulaması uygulanır (yalnızca görsel dosyalar, maksimum 10 MB).</li>
+    </ul>
+
+    <h3>9.3. Veri Saklama Süreleri</h3>
+    <ul>
+        <li>Hesap verileriniz, hesabınız aktif olduğu sürece saklanır.</li>
+        <li>Hesabınızı sildiğinizde, verileriniz anonimleştirilir ve arka plan işlemiyle tamamen temizlenir.</li>
+        <li>Sosyal içerikleriniz (gönderiler, yorumlar) hesap silindikten sonra anonimleştirilir.</li>
+        <li>Yasal yükümlülükler gerektirmedikçe silinen veriler geri alınamaz şekilde imha edilir.</li>
+    </ul>
+
+    <!-- 10. VERİ PAYLAŞIMI -->
+    <h2>10. Veri Paylaşımı ve Üçüncü Taraf Hizmetler</h2>
+    <p><strong>Kişisel verileriniz hiçbir koşulda satılmaz.</strong> Verileriniz yalnızca aşağıdaki hizmet sağlayıcılarla, belirtilen amaçlarla sınırlı olarak paylaşılır:</p>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Hizmet Sağlayıcı</th>
+                <th>Amaç</th>
+                <th>İşlenen Veriler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Google Firebase</strong> (Google LLC)</td>
+                <td>Kimlik doğrulama, veri tabanı, depolama, bildirim, uygulama güvenliği</td>
+                <td>Hesap bilgileri, uygulama verileri, cihaz tokenleri</td>
+            </tr>
+            <tr>
+                <td><strong>Google Vertex AI</strong> (Google LLC)</td>
+                <td>Yapay zekâ asistanı hizmeti</td>
+                <td>Sohbet mesajları, çeyiz listesi özeti, fotoğraflar (anlık işleme)</td>
+            </tr>
+            <tr>
+                <td><strong>RevenueCat</strong> (RevenueCat, Inc.)</td>
+                <td>Abonelik yönetimi</td>
+                <td>Kullanıcı kimliği, abonelik durumu</td>
+            </tr>
+            <tr>
+                <td><strong>Google Sign-In</strong> (Google LLC)</td>
+                <td>Sosyal giriş</td>
+                <td>Ad, e-posta, profil fotoğrafı URL'si</td>
+            </tr>
+            <tr>
+                <td><strong>Apple Sign-In</strong> (Apple Inc.)</td>
+                <td>Sosyal giriş</td>
+                <td>Ad, e-posta (veya yönlendirilmiş e-posta)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Bu hizmet sağlayıcıların kendi gizlilik politikaları için:</p>
+    <ul>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase Gizlilik Politikası</a></li>
+        <li><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud Gizlilik Bildirimi</a></li>
+        <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Gizlilik Politikası</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/tr/" target="_blank" rel="noopener">Apple Gizlilik Politikası</a></li>
+    </ul>
+
+    <!-- 11. SOSYAL ÖZELLİKLER -->
+    <h2>11. Sosyal Özellikler ve Kamuya Açık Veriler</h2>
+    <p>Uygulamanın "Meydan" (sosyal akış) bölümünde paylaştığınız içerikler, diğer kullanıcılar tarafından görülebilir:</p>
+    <ul>
+        <li>Gönderileriniz (metin ve görseller), kullanıcı adınız ve profil fotoğrafınız diğer kullanıcılara açıktır.</li>
+        <li>Beğenileriniz ve yorumlarınız ilgili gönderide görünür.</li>
+        <li>Takip edenleriniz ve takip ettikleriniz diğer kullanıcılara açıktır.</li>
+        <li>Profilinizi "gizli" olarak ayarlayarak sosyal görünürlüğünüzü kısıtlayabilirsiniz.</li>
+        <li>İstenmeyen etkileşimleri önlemek için diğer kullanıcıları engelleyebilirsiniz.</li>
+    </ul>
+
+    <!-- 12. ÇOCUKLARIN GİZLİLİĞİ -->
+    <h2>12. Çocukların Gizliliği</h2>
+    <p>çeyiZamanım, <strong>13 yaşın altındaki çocuklara</strong> yönelik değildir ve bu yaş grubundan bilerek kişisel veri toplamaz. 13 yaşından küçük bir çocuğun kişisel verilerini paylaştığını tespit etmemiz halinde, bu veriler derhal silinecektir. Ebeveyn veya vasilerin bu durumu <a href="mailto:ceyizamanim@gmail.com">ceyizamanim@gmail.com</a> adresine bildirmelerini rica ederiz.</p>
+
+    <!-- 13. HAKLARINIZ -->
+    <h2>13. Kişisel Veri Haklarınız</h2>
+    <p>KVKK'nın 11. maddesi ve GDPR kapsamında aşağıdaki haklara sahipsiniz:</p>
+    <ol>
+        <li><strong>Bilgi Edinme Hakkı:</strong> Kişisel verilerinizin işlenip işlenmediğini öğrenme.</li>
+        <li><strong>Erişim Hakkı:</strong> İşlenen kişisel verilerinize erişim talep etme.</li>
+        <li><strong>Düzeltme Hakkı:</strong> Eksik veya yanlış verilerin düzeltilmesini isteme.</li>
+        <li><strong>Silme Hakkı (Unutulma Hakkı):</strong> Kişisel verilerinizin silinmesini talep etme.</li>
+        <li><strong>İşlemenin Kısıtlanması:</strong> Belirli koşullarda veri işlemenin durdurulmasını isteme.</li>
+        <li><strong>Veri Taşınabilirliği:</strong> Verilerinizi yapılandırılmış formatta alma hakkı.</li>
+        <li><strong>İtiraz Hakkı:</strong> Kişisel verilerin işlenmesine itiraz etme.</li>
+        <li><strong>Otomatik Karar Alma:</strong> Otomatik işleme dayalı kararlara itiraz etme.</li>
+    </ol>
+
+    <h3>13.1. Uygulama İçi Haklar</h3>
+    <p>Aşağıdaki işlemleri doğrudan uygulama üzerinden gerçekleştirebilirsiniz:</p>
+    <ul>
+        <li><strong>Profil Düzenleme:</strong> Ad, biyografi ve profil fotoğrafınızı güncelleyebilirsiniz.</li>
+        <li><strong>Hesap Silme:</strong> Ayarlar &gt; Hesabı Sil seçeneği ile hesabınızı ve tüm ilişkili verileri kalıcı olarak silebilirsiniz.</li>
+        <li><strong>Bildirim Kontrolü:</strong> Bildirim tercihlerini cihaz ayarlarından yönetebilirsiniz.</li>
+        <li><strong>Konum İzni:</strong> Konum izninizi cihaz ayarlarından iptal edebilirsiniz.</li>
+        <li><strong>Engelleme:</strong> İstenmeyen kullanıcıları engelleyebilirsiniz.</li>
+        <li><strong>İçerik Silme:</strong> Gönderilerinizi, yorumlarınızı ve çeyiz listenizi istediğiniz zaman silebilirsiniz.</li>
+    </ul>
+
+    <h3>13.2. Hesap Silme Süreci</h3>
+    <p>Hesabınızı sildiğinizde:</p>
+    <ol>
+        <li>Profil bilgileriniz anonimleştirilerek "Silinmiş Kullanıcı" olarak güncellenir.</li>
+        <li>E-posta adresi, profil fotoğrafı, biyografi ve FCM tokenleri derhal kaldırılır.</li>
+        <li>Profil fotoğrafınız Firebase Storage'dan derhal silinir.</li>
+        <li>Çeyiz listesi, bütçe verileri, bildirimler, AI sohbet geçmişi ve tercihler arka planda temizlenir.</li>
+        <li>Firebase Authentication hesabınız kalıcı olarak silinir.</li>
+        <li>Bu işlem geri alınamaz.</li>
+    </ol>
+
+    <!-- 14. ÇEREZLER VE YEREL DEPOLAMA -->
+    <h2>14. Çerezler ve Yerel Depolama</h2>
+    <p>Uygulama, web tabanlı çerezler kullanmaz. Ancak, kullanıcı deneyimini iyileştirmek amacıyla cihazınızda <strong>SharedPreferences</strong> (yerel depolama) aracılığıyla aşağıdaki tercih verilerinizi saklar:</p>
+    <ul>
+        <li>Tema tercihiniz (açık/koyu mod)</li>
+        <li>Onboarding tamamlanma durumu</li>
+        <li>Dil tercihi</li>
+    </ul>
+    <p>Bu veriler cihazınızda yerel olarak tutulur ve sunucularımıza aktarılmaz.</p>
+
+    <!-- 15. ULUSLARARASI VERİ AKTARIMI -->
+    <h2>15. Uluslararası Veri Aktarımı</h2>
+    <p>Verileriniz, Firebase altyapısı kapsamında Google'ın veri merkezlerinde işlenir. Bu merkezler Avrupa Ekonomik Alanı (AEA) dışında olabilir. Google, <strong>Standart Sözleşme Maddeleri (SCCs)</strong> ve ek güvenlik önlemleri ile veri koruma seviyesini sağlar. Detaylar için <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener">Google Cloud Veri İşleme Eki</a>'ni inceleyebilirsiniz.</p>
+
+    <!-- 16. POLİTİKA DEĞİŞİKLİKLERİ -->
+    <h2>16. Politika Değişiklikleri</h2>
+    <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler yapıldığında:</p>
+    <ul>
+        <li>Uygulama içi bildirim ile bilgilendirileceksiniz.</li>
+        <li>Bu sayfadaki "Son Güncelleme" tarihi güncellenecektir.</li>
+        <li>Önemli değişikliklerde onayınız yeniden istenebilir.</li>
+    </ul>
+    <p>Güncelleme sonrasında uygulamayı kullanmaya devam etmeniz, yeni politikayı kabul ettiğiniz anlamına gelir.</p>
+
+    <!-- 17. İLETİŞİM -->
+    <h2>17. İletişim ve Başvuru</h2>
+    <p>Gizlilik politikamızla ilgili sorularınız, talepleriniz veya şikâyetleriniz için:</p>
+    <ul>
+        <li><strong>E-posta:</strong> <a href="mailto:ceyizamanim@gmail.com">ceyizamanim@gmail.com</a></li>
+    </ul>
+    <p>Başvurularınız en geç <strong>30 gün</strong> içinde yanıtlanacaktır. KVKK kapsamındaki talepleriniz için Kişisel Verileri Koruma Kurumu'na (KVKK) da başvurabilirsiniz.</p>
+
+    <!-- 18. YASAL DAYANAK -->
+    <h2>18. Yasal Dayanak</h2>
+    <p>Kişisel verileriniz aşağıdaki hukuki sebeplere dayanılarak işlenir:</p>
+    <ul>
+        <li><strong>Açık Rıza:</strong> Hesap oluşturma, fotoğraf yükleme, konum paylaşımı, bildirim izni.</li>
+        <li><strong>Sözleşmenin İfası:</strong> Uygulama hizmetlerinin sunulması, premium abonelik yönetimi.</li>
+        <li><strong>Meşru Menfaat:</strong> Hizmet iyileştirme, güvenlik, dolandırıcılık önleme.</li>
+        <li><strong>Yasal Yükümlülük:</strong> İlgili mevzuat kapsamındaki yükümlülükler.</li>
+    </ul>
+
+    <div class="footer">
+        <p>© 2026 çeyiZamanım. Tüm hakları saklıdır.</p>
+    </div>
+
 </body>
 </html>

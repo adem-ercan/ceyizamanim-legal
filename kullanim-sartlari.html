@@ -5,21 +5,398 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>çeyiZamanım - Kullanım Şartları</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; background-color: #121212; color: #e0e0e0; }
-        h1, h2 { color: #ffffff; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            padding: 24px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #0f0f14;
+            color: #d1d5db;
+            font-size: 15px;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+        }
+        h2 {
+            color: #f3f4f6;
+            font-size: 19px;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        h3 {
+            color: #e5e7eb;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 14px;
+        }
+        ul, ol {
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        a {
+            color: #a78bfa;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .update-date {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+        .summary-box {
+            background: rgba(167, 139, 250, 0.08);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            color: #c4b5fd;
+        }
+        .highlight-box {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14px;
+            color: #fbbf24;
+        }
+        .warning-box {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14px;
+            color: #fca5a5;
+        }
+        strong {
+            color: #e5e7eb;
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 13px;
+            color: #6b7280;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>çeyiZamanım Kullanım Şartları</h1>
-    <p><strong>Son Güncelleme:</strong> 5 Mart 2026</p>
-    
-    <h2>1. Kabul Edilme</h2>
-    <p>çeyiZamanım uygulamasını indirerek ve kullanarak bu şartları kabul etmiş sayılırsınız.</p>
-    
-    <h2>2. İçerik Sorumluluğu</h2>
-    <p>Kullanıcılar ("Meydan" ekranı gibi alanlarda) paylaştıkları yorumlardan ve içeriklerden bizzat sorumludur. Hakaret, küfür veya spam içeren içerikler silinebilir ve hesaplar askıya alınabilir.</p>
 
-    <h2>3. Hizmetin Kesintisi</h2>
-    <p>çeyiZamanım, uygulamanın kesintisiz çalışacağını garanti etmez. Bakım çalışmaları veya güncellemeler sebebiyle erişim kesintileri yaşanabilir.</p>
+    <h1>çeyiZamanım Kullanım Şartları</h1>
+    <p class="update-date"><strong>Son Güncelleme:</strong> 31 Mayıs 2026 &nbsp;|&nbsp; <strong>Yürürlük Tarihi:</strong> 31 Mayıs 2026</p>
+
+    <div class="summary-box">
+        <strong>Özet:</strong> Bu belge, çeyiZamanım mobil uygulamasını kullanım koşullarını belirler. Uygulamayı kullanarak bu şartları kabul etmiş olursunuz. Lütfen dikkatlice okuyunuz.
+    </div>
+
+    <!-- 1. KABUL VE KAPSAM -->
+    <h2>1. Kabul ve Kapsam</h2>
+    <p><strong>çeyiZamanım</strong> mobil uygulamasını ("Uygulama") indirerek, yükleyerek, bir hesap oluşturarak veya kullanarak bu Kullanım Şartları'nı ("Şartlar") okuduğunuzu, anladığınızı ve bağlayıcı olarak kabul ettiğinizi beyan etmiş olursunuz.</p>
+    <p>Bu Şartları kabul etmiyorsanız, Uygulamayı kullanmamanız gerekmektedir. Uygulamayı 13 yaşından küçükler kullanamaz.</p>
+
+    <!-- 2. HİZMET TANIMI -->
+    <h2>2. Hizmet Tanımı</h2>
+    <p>çeyiZamanım, çeyiz hazırlığı sürecini kolaylaştırmak amacıyla geliştirilmiş bir mobil uygulamadır. Sunulan hizmetler şunlardır:</p>
+    <ul>
+        <li><strong>Çeyiz Listesi Yönetimi:</strong> Ürün ekleme, kategorize etme, satın alma durumu takibi, fotoğraf ekleme.</li>
+        <li><strong>Bütçe Planlama:</strong> Toplam bütçe belirleme, harcama takibi, kategori bazlı bütçe dağılımı.</li>
+        <li><strong>AI Çeyiz Asistanı:</strong> Yapay zekâ destekli çeyiz tavsiyeleri, stil analizi ve kişiselleştirilmiş öneriler.</li>
+        <li><strong>Geri Sayım:</strong> Düğün, nişan ve diğer etkinlikler için geri sayım ve hatırlatıcılar.</li>
+        <li><strong>Sosyal Özellikler (Meydan):</strong> Topluluk paylaşımları, yorum, beğeni, takip ve etkileşim.</li>
+        <li><strong>İstatistikler:</strong> Çeyiz hazırlığı ilerlemenize dair detaylı grafikler ve analizler.</li>
+        <li><strong>PDF Dışa Aktarım:</strong> Çeyiz listenizi PDF olarak dışa aktarma ve paylaşma.</li>
+        <li><strong>Bildirimler ve Hatırlatıcılar:</strong> Etkinlik hatırlatmaları ve sosyal bildirimler.</li>
+        <li><strong>Anketler ve Çekilişler:</strong> Topluluk anketleri ve kampanyalar.</li>
+    </ul>
+
+    <!-- 3. HESAP OLUŞTURMA VE GÜVENLİK -->
+    <h2>3. Hesap Oluşturma ve Güvenlik</h2>
+
+    <h3>3.1. Hesap Oluşturma</h3>
+    <ul>
+        <li>Uygulamayı kullanmak için geçerli bir e-posta adresiyle hesap oluşturmanız veya Google/Apple hesabınızla giriş yapmanız gerekmektedir.</li>
+        <li>E-posta ile kayıt olan kullanıcıların e-posta adreslerini doğrulamaları zorunludur.</li>
+        <li>Kayıt sırasında verdiğiniz bilgilerin doğru ve güncel olması sizin sorumluluğunuzdadır.</li>
+        <li>Her kullanıcıya benzersiz bir kullanıcı adı otomatik olarak atanır ve bu ad sonradan değiştirilemez.</li>
+    </ul>
+
+    <h3>3.2. Hesap Güvenliği</h3>
+    <ul>
+        <li>Hesabınızın güvenliğinden siz sorumlusunuz. Şifrenizi güvenli tutmalı ve üçüncü kişilerle paylaşmamalısınız.</li>
+        <li>Hesabınızda şüpheli bir etkinlik fark etmeniz halinde derhal <a href="mailto:ceyizamanim@gmail.com">ceyizamanim@gmail.com</a> adresine bildirimde bulunmalısınız.</li>
+        <li>Hesabınız üzerinden gerçekleştirilen tüm işlemlerden siz sorumlusunuz.</li>
+    </ul>
+
+    <h3>3.3. Hesap Silme</h3>
+    <ul>
+        <li>Hesabınızı istediğiniz zaman uygulama içinden (Ayarlar &gt; Hesabı Sil) silebilirsiniz.</li>
+        <li>Hesap silme işlemi geri alınamaz. Tüm kişisel verileriniz, çeyiz listeleriniz, sosyal içerikleriniz ve sohbet geçmişiniz kalıcı olarak silinir.</li>
+        <li>Güvenlik nedeniyle hesap silme öncesinde yeniden giriş yapmanız istenebilir.</li>
+    </ul>
+
+    <!-- 4. KULLANIM KURALLARI -->
+    <h2>4. Kullanım Kuralları</h2>
+
+    <h3>4.1. Kabul Edilebilir Kullanım</h3>
+    <p>Uygulamayı yalnızca kişisel, ticari olmayan amaçlarla ve bu Şartlara uygun olarak kullanmayı kabul edersiniz.</p>
+
+    <h3>4.2. Yasaklanan Davranışlar</h3>
+    <p>Aşağıdaki davranışlar kesinlikle yasaktır:</p>
+    <ul>
+        <li><strong>Yasadışı İçerik:</strong> Yasa dışı, tehdit edici, iftira niteliğinde, müstehcen veya zararlı içerik paylaşmak.</li>
+        <li><strong>Hakaret ve Taciz:</strong> Diğer kullanıcılara yönelik hakaret, küfür, ayrımcılık, zorbalık veya taciz içeren paylaşımlar yapmak.</li>
+        <li><strong>Spam ve Reklam:</strong> İstenmeyen toplu mesajlar, ticari reklamlar veya kötü amaçlı bağlantılar paylaşmak.</li>
+        <li><strong>Sahte Hesaplar:</strong> Başka bir kişi veya kuruluş olarak kimlik taklidi yapmak.</li>
+        <li><strong>Teknik Manipülasyon:</strong> Uygulamanın güvenlik mekanizmalarını atlatmaya çalışmak, tersine mühendislik yapmak, kaynak kodunu çıkarmak veya kopyalamak.</li>
+        <li><strong>Otomatik Erişim:</strong> Bot, scraper veya otomatik araçlarla uygulamaya erişmek.</li>
+        <li><strong>Fikri Mülkiyet İhlali:</strong> Telif hakkı, ticari marka veya diğer fikri mülkiyet haklarını ihlal eden içerik paylaşmak.</li>
+        <li><strong>Veri Toplama:</strong> Diğer kullanıcıların kişisel verilerini izinsiz toplamak veya saklamak.</li>
+        <li><strong>Sistem Kötüye Kullanımı:</strong> Uygulamanın sunucularına aşırı yük bindirmek veya hizmet kesintisine neden olacak eylemler gerçekleştirmek.</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>⚠ Uyarı:</strong> Yukarıdaki kurallara aykırı davranan kullanıcıların içerikleri önceden bildirimde bulunulmaksızın silinebilir, hesapları geçici veya kalıcı olarak askıya alınabilir.
+    </div>
+
+    <!-- 5. SOSYAL ÖZELLİKLER -->
+    <h2>5. Sosyal Özellikler (Meydan)</h2>
+
+    <h3>5.1. İçerik Paylaşımı</h3>
+    <ul>
+        <li>Meydan bölümünde paylaştığınız gönderiler, fotoğraflar ve yorumlar diğer kullanıcılar tarafından görülebilir.</li>
+        <li>Paylaştığınız tüm içeriklerden <strong>bizzat siz sorumlusunuz</strong>.</li>
+        <li>İçeriklerinizin telif hakları size aittir. Ancak, uygulamada paylaşarak çeyiZamanım'a bu içerikleri uygulama içinde göstermek amacıyla sınırlı, dünya çapında, telifsiz bir lisans vermiş olursunuz. Bu lisans, hesabınızı sildiğinizde veya içeriği kaldırdığınızda sona erer.</li>
+    </ul>
+
+    <h3>5.2. İçerik Denetimi</h3>
+    <ul>
+        <li>çeyiZamanım, topluluk kurallarına aykırı içerikleri önceden bildirimde bulunmaksızın kaldırma hakkını saklı tutar.</li>
+        <li>Tekrarlanan ihlallerde hesabınız kalıcı olarak kapatılabilir.</li>
+        <li>Uygunsuz içerikle karşılaşmanız durumunda ilgili gönderiyi veya kullanıcıyı raporlayabilirsiniz.</li>
+    </ul>
+
+    <h3>5.3. Etkileşim Kuralları</h3>
+    <ul>
+        <li>Diğer kullanıcıları takip edebilir, beğenebilir ve yorum yapabilirsiniz.</li>
+        <li>İstenmeyen etkileşimleri önlemek için kullanıcıları engelleyebilirsiniz.</li>
+        <li>Engellediğiniz kullanıcılar sizin gönderilerinizi göremez ve size etkileşimde bulunamaz.</li>
+    </ul>
+
+    <!-- 6. YAPAY ZEKA ASİSTANI -->
+    <h2>6. Yapay Zekâ (AI) Asistanı Kullanım Koşulları</h2>
+
+    <h3>6.1. Hizmetin Niteliği</h3>
+    <ul>
+        <li>AI Çeyiz Asistanı, çeyiz hazırlığı sürecinde yardımcı tavsiyeler sunmak amacıyla tasarlanmıştır.</li>
+        <li>AI'nın sunduğu tavsiyeler <strong>bilgilendirme amaçlıdır</strong> ve profesyonel danışmanlık (finansal, hukuki, sağlık, iç mimarlık vb.) yerine geçmez.</li>
+        <li>AI çıktılarının doğruluğu, eksiksizliği veya güncelliği garanti edilmez.</li>
+    </ul>
+
+    <h3>6.2. Kullanıcı Sorumlulukları</h3>
+    <ul>
+        <li>AI asistanına gönderdiğiniz mesajlar ve fotoğraflar için sorumluluk size aittir.</li>
+        <li>AI asistanını yasadışı, zararlı veya kötü niyetli amaçlarla kullanmayı kabul etmezsiniz.</li>
+        <li>AI tavsiyelerine dayalı kararların sonuçlarından çeyiZamanım sorumlu tutulamaz.</li>
+    </ul>
+
+    <h3>6.3. Veri İşleme</h3>
+    <ul>
+        <li>AI asistanıyla paylaştığınız veriler, yalnızca size yanıt üretmek amacıyla anlık olarak işlenir.</li>
+        <li>Bu veriler yapay zekâ model eğitimi için kullanılmaz.</li>
+        <li>Detaylar için <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>'nın 4. maddesini inceleyebilirsiniz.</li>
+    </ul>
+
+    <!-- 7. PREMİUM ABONELİK -->
+    <h2>7. Premium Abonelik</h2>
+
+    <h3>7.1. Abonelik Planları</h3>
+    <ul>
+        <li>çeyiZamanım, gelişmiş özelliklere erişim sağlayan Premium abonelik planları sunar.</li>
+        <li>Abonelik planları, fiyatları ve içerikleri uygulama içindeki Premium sayfasında güncel olarak sunulur.</li>
+        <li>Fiyatlar bulunduğunuz ülkeye ve para birimine göre değişiklik gösterebilir.</li>
+    </ul>
+
+    <h3>7.2. Ödeme ve Yenileme</h3>
+    <ul>
+        <li>Tüm ödemeler <strong>Apple App Store</strong> (iOS) veya <strong>Google Play Store</strong> (Android) üzerinden işlenir.</li>
+        <li>Abonelikler, iptal edilmedikçe her dönem sonunda otomatik olarak yenilenir.</li>
+        <li>Yenileme ücreti, mevcut dönemin sona ermesinden <strong>24 saat önce</strong> hesabınızdan tahsil edilir.</li>
+        <li>Kredi kartı veya ödeme bilgileriniz çeyiZamanım tarafından toplanmaz veya saklanmaz.</li>
+    </ul>
+
+    <h3>7.3. İptal ve İade</h3>
+    <ul>
+        <li>Aboneliğinizi istediğiniz zaman ilgili mağazanın abonelik yönetim sayfasından iptal edebilirsiniz:
+            <ul>
+                <li><strong>iOS:</strong> Ayarlar &gt; Apple ID &gt; Abonelikler</li>
+                <li><strong>Android:</strong> Google Play Store &gt; Abonelikler</li>
+            </ul>
+        </li>
+        <li>İptal, mevcut dönemin sonuna kadar geçerli olmaz; dönem sonuna kadar Premium özellikleriniz devam eder.</li>
+        <li>İade talepleri, ilgili mağazanın (Apple/Google) iade politikalarına tabidir. çeyiZamanım doğrudan iade işlemi gerçekleştirmez.</li>
+    </ul>
+
+    <h3>7.4. Ücretsiz Deneme</h3>
+    <ul>
+        <li>Sunulması halinde, ücretsiz deneme süresi yalnızca yeni aboneler için geçerlidir.</li>
+        <li>Deneme süresi sona ermeden iptal edilmezse, abonelik otomatik olarak ücretli plana geçer.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>💡 Hatırlatma:</strong> Aboneliğinizi yönetmek için uygulama içindeki Ayarlar &gt; Premium bölümünü kullanabilirsiniz. Bu bölüm sizi doğrudan ilgili mağazanın abonelik yönetim sayfasına yönlendirir.
+    </div>
+
+    <!-- 8. FİKRİ MÜLKİYET -->
+    <h2>8. Fikri Mülkiyet Hakları</h2>
+
+    <h3>8.1. Uygulamanın Hakları</h3>
+    <ul>
+        <li>çeyiZamanım uygulamasının tasarımı, kaynak kodu, algoritmaları, grafikleri, logosu, ikonları ve marka adı dahil tüm fikri mülkiyet hakları çeyiZamanım geliştiricisine aittir.</li>
+        <li>Uygulamanın herhangi bir bölümünü kopyalamak, çoğaltmak, dağıtmak, tersine mühendislik yapmak veya türev eserler oluşturmak yasaktır.</li>
+    </ul>
+
+    <h3>8.2. Kullanıcı İçerikleri</h3>
+    <ul>
+        <li>Uygulamaya yüklediğiniz fotoğraflar, metinler ve diğer içerikler üzerindeki fikri mülkiyet hakları size aittir.</li>
+        <li>İçeriklerinizi paylaşarak, çeyiZamanım'a bu içerikleri uygulama hizmetlerinin sunulması amacıyla kullanma, gösterme ve dağıtma hakkı (lisans) vermiş olursunuz.</li>
+        <li>Bu lisans, münhasır olmayan, telifsiz ve alt lisanslanabilir niteliktedir.</li>
+        <li>İçeriklerinizi sildiğinizde veya hesabınızı kapattığınızda bu lisans sona erer.</li>
+    </ul>
+
+    <!-- 9. SORUMLULUK SINIRLAMASI -->
+    <h2>9. Sorumluluk Sınırlaması</h2>
+
+    <h3>9.1. Hizmet Garantisi</h3>
+    <ul>
+        <li>çeyiZamanım, Uygulamayı <strong>"olduğu gibi"</strong> ve <strong>"mevcut haliyle"</strong> sunar.</li>
+        <li>Uygulamanın kesintisiz, hatasız veya güvenli çalışacağına dair herhangi bir garanti verilmez.</li>
+        <li>Bakım çalışmaları, güncellemeler, teknik arızalar veya üçüncü taraf hizmet kesintileri nedeniyle erişim kesintileri yaşanabilir.</li>
+    </ul>
+
+    <h3>9.2. Sorumluluk Sınırları</h3>
+    <p>Yürürlükteki mevzuatın izin verdiği azami ölçüde, çeyiZamanım aşağıdaki durumlardan sorumlu tutulamaz:</p>
+    <ul>
+        <li>Uygulamanın kullanımından veya kullanılamamasından kaynaklanan doğrudan, dolaylı, arızi, özel veya cezai zararlar.</li>
+        <li>AI asistanının sağladığı tavsiyeler doğrultusunda alınan kararların sonuçları.</li>
+        <li>Kullanıcılar arasındaki etkileşimlerden doğan anlaşmazlıklar.</li>
+        <li>Üçüncü taraf hizmetlerindeki (Firebase, Google, Apple, RevenueCat) kesintiler veya veri ihlalleri.</li>
+        <li>Kullanıcının hesap güvenliğini sağlamamasından kaynaklanan yetkisiz erişimler.</li>
+        <li>Mücbir sebep halleri (doğal afet, savaş, pandemi, internet altyapı arızaları vb.).</li>
+    </ul>
+
+    <h3>9.3. Tazminat</h3>
+    <p>çeyiZamanım'ın herhangi bir sorumluluğu doğması halinde, toplam tazminat miktarı kullanıcının son 12 ay içinde çeyiZamanım'a ödediği toplam abonelik ücretini aşamaz.</p>
+
+    <!-- 10. ÜÇÜNCÜ TARAF HİZMETLER VE BAĞLANTILAR -->
+    <h2>10. Üçüncü Taraf Hizmetler ve Bağlantılar</h2>
+    <ul>
+        <li>Uygulama, Google Firebase, Vertex AI ve RevenueCat gibi üçüncü taraf hizmetlerini kullanır. Bu hizmetler kendi kullanım şartlarına tabidir.</li>
+        <li>Uygulama içinde veya AI asistanı tarafından önerilen dış bağlantılar (web siteleri, ürünler vb.) için çeyiZamanım sorumluluk kabul etmez.</li>
+        <li>Üçüncü taraf web sitelerine erişim tamamen sizin sorumluluğunuzdadır.</li>
+    </ul>
+
+    <!-- 11. HİZMET DEĞİŞİKLİKLERİ -->
+    <h2>11. Hizmet Değişiklikleri ve Sonlandırma</h2>
+
+    <h3>11.1. Hizmet Değişiklikleri</h3>
+    <ul>
+        <li>çeyiZamanım, Uygulamanın özelliklerini, tasarımını ve işlevselliğini önceden bildirimde bulunmaksızın değiştirme, güncelleme veya kaldırma hakkını saklı tutar.</li>
+        <li>Premium özelliklerdeki önemli değişiklikler, mevcut abonelik döneminin sonunda yürürlüğe girer.</li>
+    </ul>
+
+    <h3>11.2. Hizmet Sonlandırma</h3>
+    <ul>
+        <li>çeyiZamanım, makul bir bildirim süresi vererek Uygulama hizmetini tamamen sonlandırabilir.</li>
+        <li>Hizmet sonlandırılması halinde, aktif Premium aboneliklerin kalan süreleri için iade, ilgili mağazanın politikalarına göre değerlendirilir.</li>
+        <li>Hizmet sonlandırılmadan önce kullanıcılara verilerini dışa aktarma imkânı sağlanır.</li>
+    </ul>
+
+    <h3>11.3. Hesap Askıya Alma ve Kapatma</h3>
+    <ul>
+        <li>Kullanım kurallarını ihlal etmeniz durumunda hesabınız geçici veya kalıcı olarak askıya alınabilir.</li>
+        <li>Hesap askıya alma kararları öncesinde mümkün olduğunca uyarı yapılır; ancak ciddi ihlallerde derhal işlem yapılabilir.</li>
+        <li>Hesabınızın haksız yere askıya alındığını düşünüyorsanız, <a href="mailto:ceyizamanim@gmail.com">ceyizamanim@gmail.com</a> adresinden itirazda bulunabilirsiniz.</li>
+    </ul>
+
+    <!-- 12. ÇEKİLİŞ VE ANKETLER -->
+    <h2>12. Çekilişler ve Anketler</h2>
+    <ul>
+        <li>Uygulama zaman zaman çekilişler ve anketler düzenleyebilir.</li>
+        <li>Çekilişlere katılım isteğe bağlıdır ve ilgili mevzuata uygun olarak gerçekleştirilir.</li>
+        <li>Her çekiliş için ayrı katılım koşulları belirlenebilir.</li>
+        <li>Anket yanıtları anonim olarak toplanır ve hizmet iyileştirme amacıyla kullanılır.</li>
+    </ul>
+
+    <!-- 13. GİZLİLİK POLİTİKASI REFERANSI -->
+    <h2>13. Gizlilik Politikası</h2>
+    <p>Kişisel verilerinizin nasıl toplandığı, kullanıldığı, saklandığı ve korunduğu hakkında detaylı bilgi için <a href="gizlilik-politikasi.html">Gizlilik Politikamızı</a> inceleyiniz. Gizlilik Politikası, bu Kullanım Şartları'nın ayrılmaz bir parçasıdır.</p>
+
+    <!-- 14. ŞARTLARIN DEĞİŞTİRİLMESİ -->
+    <h2>14. Şartların Değiştirilmesi</h2>
+    <ul>
+        <li>çeyiZamanım, bu Kullanım Şartları'nı dilediği zaman güncelleme hakkını saklı tutar.</li>
+        <li>Önemli değişiklikler yapıldığında uygulama içi bildirimle bilgilendirileceksiniz.</li>
+        <li>Değişiklik sonrasında Uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</li>
+        <li>Güncellenmiş şartları kabul etmemeniz halinde Uygulamayı kullanmayı bırakmanız ve hesabınızı silmeniz gerekmektedir.</li>
+    </ul>
+
+    <!-- 15. UYGULANACAK HUKUK VE UYUŞMAZLIK ÇÖZÜMÜ -->
+    <h2>15. Uygulanacak Hukuk ve Uyuşmazlık Çözümü</h2>
+    <ul>
+        <li>Bu Kullanım Şartları, <strong>Türkiye Cumhuriyeti</strong> hukukuna tabi olarak yorumlanır ve uygulanır.</li>
+        <li>Bu Şartlardan doğan veya bu Şartlarla bağlantılı tüm uyuşmazlıklarda <strong>Türkiye Cumhuriyeti Mahkemeleri</strong> yetkilidir.</li>
+        <li>Tüketici haklarına ilişkin uyuşmazlıklarda Tüketici Hakem Heyetleri ve Tüketici Mahkemeleri yetkilidir.</li>
+    </ul>
+
+    <!-- 16. MÜCBİR SEBEP -->
+    <h2>16. Mücbir Sebep</h2>
+    <p>çeyiZamanım, kontrolü dışında gelişen olaylar (doğal afet, savaş, salgın hastalık, siber saldırı, internet altyapı arızaları, hükümet kararları, tedarikçi kesintileri vb.) nedeniyle hizmet sunumundaki aksaklıklardan sorumlu tutulamaz. Mücbir sebep hallerinde yükümlülükler, durum ortadan kalkana kadar askıya alınır.</p>
+
+    <!-- 17. BÖLÜNEBILIRLIK -->
+    <h2>17. Bölünebilirlik</h2>
+    <p>Bu Şartların herhangi bir hükmünün geçersiz veya uygulanamaz bulunması halinde, diğer hükümler tam olarak yürürlükte kalmaya devam eder. Geçersiz bulunan hüküm, amaçlanan hedefe en yakın geçerli bir hükümle değiştirilmiş sayılır.</p>
+
+    <!-- 18. FERİ HAKTAN FERAGAT -->
+    <h2>18. Haktan Feragat</h2>
+    <p>çeyiZamanım'ın bu Şartlardaki herhangi bir hakkını veya hükmünü herhangi bir zamanda kullanmaması, söz konusu haktan veya hükümden feragat ettiği anlamına gelmez.</p>
+
+    <!-- 19. TAMLIK -->
+    <h2>19. Sözleşmenin Tamlığı</h2>
+    <p>Bu Kullanım Şartları, <a href="gizlilik-politikasi.html">Gizlilik Politikası</a> ile birlikte sizinle çeyiZamanım arasındaki anlaşmanın tamamını oluşturur ve konu ile ilgili önceki tüm yazılı veya sözlü anlaşmaların yerine geçer.</p>
+
+    <!-- 20. İLETİŞİM -->
+    <h2>20. İletişim</h2>
+    <p>Bu Kullanım Şartları ile ilgili soru, öneri veya şikâyetleriniz için:</p>
+    <ul>
+        <li><strong>E-posta:</strong> <a href="mailto:ceyizamanim@gmail.com">ceyizamanim@gmail.com</a></li>
+    </ul>
+    <p>Tüm başvurulara en geç <strong>30 gün</strong> içinde yanıt verilecektir.</p>
+
+    <div class="footer">
+        <p>© 2026 çeyiZamanım. Tüm hakları saklıdır.</p>
+    </div>
+
 </body>
 </html>
