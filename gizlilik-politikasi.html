@@ -195,8 +195,8 @@
                 <td>Mağaza konum önerileri, sosyal harita özelliği</td>
             </tr>
             <tr>
-                <td><strong>Bildirim Tokenleri</strong></td>
-                <td>Firebase Cloud Messaging (FCM) cihaz tokenleri</td>
+                <td><strong>Bildirim Belirteçleri</strong></td>
+                <td>Anlık bildirim (Push Notification) cihaz belirteçleri (token)</td>
                 <td>Push bildirimlerinin iletilmesi</td>
             </tr>
             <tr>
@@ -210,7 +210,7 @@
     <h3>3.3. Üçüncü Taraf Kimlik Doğrulama Verileri</h3>
     <p>Uygulamaya aşağıdaki yöntemlerle giriş yapabilirsiniz:</p>
     <ul>
-        <li><strong>E-posta ve Şifre:</strong> E-posta adresiniz Firebase Authentication tarafından güvenle saklanır. Şifreniz hiçbir zaman düz metin olarak depolanmaz.</li>
+        <li><strong>E-posta ve Şifre:</strong> E-posta adresiniz ve hesap bilgileriniz güvenli kimlik doğrulama servisleri aracılığıyla saklanır. Şifreniz hiçbir zaman düz metin olarak depolanmaz.</li>
         <li><strong>Google ile Giriş:</strong> Google hesabınızdaki ad, e-posta ve profil fotoğrafı URL'si alınır. Google hesap şifrenize erişim sağlanmaz.</li>
         <li><strong>Apple ile Giriş:</strong> Apple kimliğinizdeki ad ve e-posta bilgileri alınır. Apple'ın "Hide My Email" özelliğini kullanmanız durumunda yalnızca Apple tarafından oluşturulan yönlendirilmiş e-posta adresi işlenir.</li>
     </ul>
@@ -230,9 +230,9 @@
 
     <h3>4.2. Nasıl İşlenir</h3>
     <ul>
-        <li>AI hizmeti, <strong>Google Firebase AI (Vertex AI – Gemini modelleri)</strong> üzerinden sağlanır.</li>
+        <li>AI hizmeti, <strong>Google Cloud Yapay Zekâ (Vertex AI)</strong> servisleri üzerinden sağlanır.</li>
         <li>Mesajlarınız ve verileriniz yalnızca anlık olarak işlenir; model eğitimi amacıyla kullanılmaz.</li>
-        <li>AI sohbet geçmişi, hesabınızın Firestore alt koleksiyonunda saklanır ve yalnızca siz erişebilirsiniz.</li>
+        <li>AI sohbet geçmişiniz, hesabınızla ilişkili güvenli bulut veri tabanında saklanır ve yalnızca sizin tarafınızdan erişilebilir.</li>
         <li>Premium kullanıcılar için topluluk istatistikleri anonim ve toplu halde AI'ya bağlam olarak sunulabilir.</li>
     </ul>
 
@@ -248,7 +248,7 @@
         <li><strong>Çeyiz ürünü görselleri:</strong> Çeyiz listenizdeki ürünlere fotoğraf eklemek için.</li>
         <li><strong>AI stil analizi:</strong> Oda fotoğraflarını yapay zekâya göndererek dekorasyon önerisi almak için.</li>
     </ul>
-    <p>Bu izinler isteğe bağlıdır. İzin vermemeniz halinde yalnızca ilgili özellikler kullanılamaz hale gelir; uygulamanın diğer işlevleri etkilenmez. Yüklenen görseller Firebase Storage'da şifrelenmiş bağlantıyla saklanır ve dosya boyutu <strong>10 MB</strong> ile sınırlıdır.</p>
+    <p>Bu izinler isteğe bağlıdır. İzin vermemeniz halinde yalnızca ilgili özellikler kullanılamaz hale gelir; uygulamanın diğer işlevleri etkilenmez. Yüklenen görseller güvenli bulut depolama sunucularımızda şifrelenmiş bağlantıyla saklanır ve dosya boyutu <strong>10 MB</strong> ile sınırlıdır.</p>
 
     <!-- 6. KONUM -->
     <h2>6. Konum Verileri</h2>
@@ -263,7 +263,7 @@
     <h2>7. Bildirimler</h2>
     <p>Uygulama, aşağıdaki amaçlarla bildirim gönderebilir:</p>
     <ul>
-        <li><strong>Push Bildirimleri (FCM):</strong> Sosyal etkileşimler (beğeni, yorum, takip), duyurular ve güncellemeler için.</li>
+        <li><strong>Anlık Bildirimler (Push Notifications):</strong> Sosyal etkileşimler (beğeni, yorum, takip), duyurular ve güncellemeler için.</li>
         <li><strong>Yerel Bildirimler:</strong> Geri sayım hatırlatıcıları (düğün, nişan gibi etkinliklere 1 hafta ve 1 gün kala).</li>
     </ul>
     <p>Bildirim izni isteğe bağlıdır. İzin vermemeniz halinde bildirimler gönderilmez; uygulamanın temel işlevleri etkilenmez.</p>
@@ -275,7 +275,7 @@
         <li>Abonelik işlemleri tamamen <strong>Apple App Store</strong> (iOS) veya <strong>Google Play Store</strong> (Android) üzerinden gerçekleştirilir.</li>
         <li>Kredi kartı, banka kartı veya diğer ödeme bilgileriniz hiçbir koşulda çeyiZamanım tarafından toplanmaz, görülmez veya saklanmaz.</li>
         <li>Abonelik yönetimi için <strong>RevenueCat</strong> hizmeti kullanılmaktadır. RevenueCat yalnızca abonelik durumunuzu (aktif/pasif) ve işlem kimliğinizi işler.</li>
-        <li>Abonelik durumunuz, hesabınızla ilişkili olarak Firestore'da saklanır.</li>
+        <li>Abonelik durumunuz, hesabınızla ilişkili olarak güvenli bulut sistemlerimizde saklanır.</li>
         <li>Aboneliğinizi istediğiniz zaman ilgili mağazanın abonelik yönetim sayfasından iptal edebilirsiniz.</li>
     </ul>
 
@@ -283,27 +283,26 @@
     <h2>9. Veri Saklama ve Güvenlik</h2>
 
     <h3>9.1. Veri Saklama Altyapısı</h3>
-    <p>Tüm verileriniz <strong>Google Firebase</strong> altyapısında saklanır:</p>
+    <p>Uygulama kapsamında toplanan verileriniz, dünya standartlarında güvenlik sertifikalarına sahip olan ve veri işleyen konumundaki <strong>Google LLC (Firebase)</strong> bulut altyapısında barındırılır. Verileriniz, kullanım amaçlarına göre kategorize edilerek aşağıdaki şekillerde saklanır:</p>
     <ul>
-        <li><strong>Firebase Authentication:</strong> Kimlik doğrulama verileri</li>
-        <li><strong>Cloud Firestore:</strong> Kullanıcı profilleri, çeyiz listeleri, bütçe verileri, sosyal içerikler, sohbet geçmişi</li>
-        <li><strong>Firebase Storage:</strong> Profil fotoğrafları, gönderi görselleri, ürün görselleri</li>
-        <li><strong>Firebase Cloud Messaging:</strong> Bildirim tokenleri</li>
-        <li><strong>Firebase App Check:</strong> Uygulama doğrulama ve güvenlik</li>
+        <li><strong>Kimlik Doğrulama:</strong> Güvenli kimlik doğrulama servisleri üzerinde kullanıcı hesap bilgileri.</li>
+        <li><strong>Veri Tabanı:</strong> Kullanıcı profilleri, çeyiz listeleri, bütçe verileri, sosyal içerikler ve sohbet geçmişi gibi dinamik içerikler güvenli bulut veri tabanında.</li>
+        <li><strong>Bulut Depolama:</strong> Profil fotoğrafları, gönderi görselleri ve ürün görselleri gibi medya dosyaları güvenli bulut depolama sunucularında.</li>
+        <li><strong>Bildirim Yönetimi:</strong> Uygulama içi ve push bildirimlerin iletimi için gerekli olan cihaz belirteçleri (token).</li>
+        <li><strong>Uygulama Güvenliği:</strong> Yetkisiz erişimleri önlemek amacıyla kullanılan entegre uygulama doğrulama sistemleri.</li>
     </ul>
 
     <h3>9.2. Güvenlik Önlemleri</h3>
     <ul>
-        <li>Tüm veri iletişimi <strong>TLS/SSL</strong> şifreleme ile korunur.</li>
-        <li>Firebase Security Rules ile her kullanıcı yalnızca kendi verilerine erişebilir.</li>
-        <li>Şifreler, Firebase Authentication tarafından endüstri standardı hash algoritmaları ile saklanır.</li>
-        <li>Firebase App Check ile yetkisiz API erişimleri engellenir.</li>
-        <li>Dosya yüklemelerinde tür ve boyut doğrulaması uygulanır (yalnızca görsel dosyalar, maksimum 10 MB).</li>
+        <li>Tüm veri iletişimi, aktarım sırasında şifreleme (SSL/TLS gibi endüstri standardı protokoller) ile korunur.</li>
+        <li>Bulut veri tabanlarında yetkilendirme kuralları uygulanarak, her kullanıcının yalnızca kendi izinli olduğu verilere erişebilmesi sağlanır.</li>
+        <li>Şifreleriniz, veri tabanımızda hiçbir şekilde düz metin olarak tutulmaz; endüstri standardı güçlü şifreleme/hash algoritmaları ile saklanır.</li>
+        <li>Yetkisiz API erişimlerini ve kötü niyetli istekleri engellemek için uygulama ve sunucu düzeyinde doğrulama mekanizmaları kullanılır.</li>
+        <li>Sistem güvenliğini ve depolama performansını korumak amacıyla, dosya yüklemelerinde tür ve boyut sınırlandırmaları (yalnızca görsel formatlar ve maksimum 10 MB) uygulanır.</li>
     </ul>
 
     <h3>9.3. Veri Saklama Süreleri</h3>
     <ul>
-        <li>Hesap verileriniz, hesabınız aktif olduğu sürece saklanır.</li>
         <li>Hesabınızı sildiğinizde, verileriniz anonimleştirilir ve arka plan işlemiyle tamamen temizlenir.</li>
         <li>Sosyal içerikleriniz (gönderiler, yorumlar) hesap silindikten sonra anonimleştirilir.</li>
         <li>Yasal yükümlülükler gerektirmedikçe silinen veriler geri alınamaz şekilde imha edilir.</li>
@@ -324,7 +323,7 @@
             <tr>
                 <td><strong>Google Firebase</strong> (Google LLC)</td>
                 <td>Kimlik doğrulama, veri tabanı, depolama, bildirim, uygulama güvenliği</td>
-                <td>Hesap bilgileri, uygulama verileri, cihaz tokenleri</td>
+                <td>Hesap bilgileri, uygulama verileri, cihaz belirteçleri (token)</td>
             </tr>
             <tr>
                 <td><strong>Google Vertex AI</strong> (Google LLC)</td>
@@ -400,16 +399,16 @@
     <p>Hesabınızı sildiğinizde:</p>
     <ol>
         <li>Profil bilgileriniz anonimleştirilerek "Silinmiş Kullanıcı" olarak güncellenir.</li>
-        <li>E-posta adresi, profil fotoğrafı, biyografi ve FCM tokenleri derhal kaldırılır.</li>
-        <li>Profil fotoğrafınız Firebase Storage'dan derhal silinir.</li>
+        <li>E-posta adresi, profil fotoğrafı, biyografi ve bildirim belirteçleri derhal kaldırılır.</li>
+        <li>Profil fotoğrafınız bulut depolama sunucularından derhal silinir.</li>
         <li>Çeyiz listesi, bütçe verileri, bildirimler, AI sohbet geçmişi ve tercihler arka planda temizlenir.</li>
-        <li>Firebase Authentication hesabınız kalıcı olarak silinir.</li>
+        <li>Kullanıcı hesabı kalıcı olarak silinir.</li>
         <li>Bu işlem geri alınamaz.</li>
     </ol>
 
     <!-- 14. ÇEREZLER VE YEREL DEPOLAMA -->
     <h2>14. Çerezler ve Yerel Depolama</h2>
-    <p>Uygulama, web tabanlı çerezler kullanmaz. Ancak, kullanıcı deneyimini iyileştirmek amacıyla cihazınızda <strong>SharedPreferences</strong> (yerel depolama) aracılığıyla aşağıdaki tercih verilerinizi saklar:</p>
+    <p>Uygulama, web tabanlı çerezler kullanmaz. Ancak, kullanıcı deneyimini iyileştirmek amacıyla cihazınızda **yerel depolama** (local storage) aracılığıyla aşağıdaki tercih verilerinizi saklar:</p>
     <ul>
         <li>Tema tercihiniz (açık/koyu mod)</li>
         <li>Onboarding tamamlanma durumu</li>
